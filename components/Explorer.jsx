@@ -48,7 +48,7 @@ const Explorer = () => {
               className={`flex items-end space-x-1 px-4 py-2 hover:bg-gray-700 cursor-pointer ${
                 router.pathname === item.path && "bg-gray-800"
               }`}>
-              <Image src={item.icon} width={16} height={16} />
+              <Image src={item.icon} width={16} height={16} alt="file icon" />
               <p className="text-slate-400 text-sm">{item.name}</p>
             </div>
           </Link>

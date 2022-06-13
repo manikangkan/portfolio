@@ -67,11 +67,7 @@ const Contact = () => {
               className="text-slate-400 font-mono text-xl leading-relaxed"
               key={index}>
               &nbsp;&nbsp;{item.social}:{" "}
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noopener"
-                className="text-yellow-300">
+              <a href={item.href} target="_blank" className="text-yellow-300">
                 {item.link}
               </a>
               ;
@@ -82,11 +78,7 @@ const Contact = () => {
               className="text-slate-400 font-mono text-xl leading-relaxed"
               key={index}>
               &nbsp;&nbsp;{item.social}:{" "}
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noopener"
-                className="text-yellow-300">
+              <a href={item.href} target="_blank" className="text-yellow-300">
                 {item.link}
               </a>
               ;

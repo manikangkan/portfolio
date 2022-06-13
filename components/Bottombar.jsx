@@ -31,7 +31,9 @@ const Bottombar = () => {
     <footer className="bg-gray-900 flex items-center justify-between">
       <section className="flex items-center">
         {leftItems.map(({ label, icon }) => (
-          <div className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 px-2 py-1">
+          <div
+            className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 px-2 py-1"
+            key={label}>
             <Image
               src={icon}
               alt="bell icon"
@@ -45,7 +47,9 @@ const Bottombar = () => {
       </section>
       <section className="flex items-center">
         {rightItems.map(({ label, icon }) => (
-          <div className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 px-2 py-1">
+          <div
+            className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 px-2 py-1"
+            key={label}>
             <Image
               src={icon}
               alt="bell icon"

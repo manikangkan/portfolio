@@ -5,7 +5,7 @@ const Tabsbar = () => {
   return (
     <div className="bg-gray-900 flex items-center">
       {items.map((item) => (
-        <Tab item={item} />
+        <Tab item={item} key={item.name} />
       ))}
     </div>
   );
