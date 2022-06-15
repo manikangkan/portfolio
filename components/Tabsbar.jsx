@@ -8,6 +8,10 @@ const rightItems = [
     icon: "/icons/play.svg",
   },
   {
+    label: "compare changes",
+    icon: "/icons/compare-changes.svg",
+  },
+  {
     label: "split horizontal",
     icon: "/icons/split-horizontal.svg",
   },
@@ -25,10 +29,10 @@ const Tabsbar = () => {
           <Tab item={item} key={item.name} />
         ))}
       </div>
-      <div className="flex items-center space-x-4 mx-4">
+      <div className="flex items-center space-x-2 mx-4">
         {rightItems.map((item) => (
-          <div className="invert cursor-pointer" key={item.label}>
-            <Image src={item.icon} alt="bell icon" height={16} width={16} />
+          <div className="icon-btn" key={item.label}>
+            <Image src={item.icon} alt="bell icon" height={16} width={16} className="invert mt-1"/>
           </div>
         ))}
       </div>

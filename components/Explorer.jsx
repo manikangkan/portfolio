@@ -40,7 +40,27 @@ const Explorer = () => {
 
   return (
     <nav className="bg-gray-900 w-1/6">
-      <p className="p-4 text-slate-100 font-medium">Explorer</p>
+      <div className="p-4 flex items-center justify-between">
+        <div className="space-x-2 flex items-center">
+          <Image
+            src="/icons/clear-all.svg"
+            width={16}
+            height={16}
+            alt="arrow"
+            className="invert"
+          />
+          <p className="text-slate-100 font-medium">Explorer</p>
+        </div>
+        <div className="icon-btn">
+          <Image
+            src="/icons/more-horizontal.svg"
+            width={16}
+            height={16}
+            alt="arrow"
+            className="invert"
+          />
+        </div>
+      </div>
       <section>
         {items.map((item) => (
           <Link href={item.path} key={item.name}>

@@ -14,4 +14,8 @@
   .btn-outline {
     @apply px-6 py-2 rounded-sm font-medium text-yellow-300  border border-yellow-300 hover:bg-yellow-300 hover:text-gray-800;
   }
+
+  .icon-btn {
+    @apply hover:bg-gray-800 w-6 aspect-square grid place-content-center rounded-sm cursor-pointer;
+  }
 }
