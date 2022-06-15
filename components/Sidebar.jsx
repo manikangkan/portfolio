@@ -75,12 +75,12 @@ const Sidebar = () => {
     <aside className="bg-gray-800 flex flex-col justify-between">
       <section className="flex flex-col">
         {topItems.map((item) => (
-          <Layout item={item} />
+          <Layout item={item} key={item.label} />
         ))}
       </section>
       <section className="flex flex-col">
         {bottomItems.map((item) => (
-          <Layout item={item} />
+          <Layout item={item} key={item.label} />
         ))}
       </section>
     </aside>

@@ -23,14 +23,10 @@ export default function Home() {
           </div>
           <div className="space-x-4">
             <Link href="/projects">
-              <button className="px-6 py-2 rounded-sm font-medium bg-yellow-300 text-gray-800  border border-yellow-300 hover:bg-transparent hover:text-yellow-300">
-                View Work
-              </button>
+              <button className="btn-fill">View Work</button>
             </Link>
             <Link href="/contact">
-              <button className="px-6 py-2 rounded-sm font-medium text-yellow-300  border border-yellow-300 hover:bg-yellow-300 hover:text-gray-800">
-                Contact Me
-              </button>
+              <button className="btn-outline">Contact Me</button>
             </Link>
           </div>
         </section>

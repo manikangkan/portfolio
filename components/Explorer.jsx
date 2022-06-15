@@ -24,8 +24,8 @@ export const items = [
     icon: "/js_icon.svg",
   },
   {
-    name: "articles.json",
-    path: "/articles",
+    name: "uiux.json",
+    path: "/uiux",
     icon: "/json_icon.svg",
   },
   {

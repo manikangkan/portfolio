@@ -6,16 +6,14 @@ import Bottombar from "../components/Bottombar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="h-screen overflow-hidden flex flex-col justify-between">
+    <div className="h-screen overflow-hidden hidden xl:flex flex-col justify-between">
       <Titlebar />
       <section className="flex-1 flex justify-between">
         <Sidebar />
         <Explorer />
         <section className="flex-1">
           <Tabsbar />
-          <main className="bg-gray-800 h-full">
-            {children}
-          </main>
+          <main className="bg-gray-800 h-full">{children}</main>
         </section>
       </section>
       <Bottombar />

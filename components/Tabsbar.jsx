@@ -27,7 +27,7 @@ const Tabsbar = () => {
       </div>
       <div className="flex items-center space-x-4 mx-4">
         {rightItems.map((item) => (
-          <div className="invert cursor-pointer">
+          <div className="invert cursor-pointer" key={item.label}>
             <Image src={item.icon} alt="bell icon" height={16} width={16} />
           </div>
         ))}

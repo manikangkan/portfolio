@@ -1,8 +1,10 @@
-const contactItems = [
+import { useState } from "react";
+
+const items = [
   {
     social: "website",
     link: "manikangkandas.dev",
-    href: "https://manikangkandas.dev",
+    href: "https://portfolio-manikangkandas.vercel.app/",
   },
   {
     social: "email",
@@ -30,28 +32,34 @@ const contactItems = [
     href: "https://www.instagram.com/manikangkandas",
   },
   {
-    social: "polywork",
+    social: "behance",
     link: "manikangkandas",
-    href: "https://www.polywork.com/manikangkandas",
-  },
-  {
-    social: "telegram",
-    link: "manikangkandas",
-    href: "https://t.me/manikangkandas",
+    href: "https://www.behance.net/asity",
   },
   {
     social: "codepen",
     link: "manikangkandas",
     href: "https://codepen.io/manikangkandas",
   },
-  {
-    social: "codesandbox",
-    link: "manikangkandas",
-    href: "https://codesandbox.io/u/manikangkandas",
-  },
 ];
 
 const Contact = () => {
+  const formData = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    formData[e.target.name] = e.target.value;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
     <div className="p-4 flex items-start">
       <section className="flex-1">
@@ -62,7 +70,7 @@ const Contact = () => {
           <p className="text-slate-400 font-mono text-xl leading-relaxed  before:content-[counter(line)]">
             <span className="text-yellow-300">&nbsp;.socials</span> &#123;
           </p>
-          {contactItems.map((item, index) => (
+          {items.map((item, index) => (
             <p
               className="text-slate-400 font-mono text-xl leading-relaxed  before:content-[counter(line)]"
               key={index}>
@@ -86,31 +94,34 @@ const Contact = () => {
         <h6 className="text-slate-400 font-mono text-2xl">
           🥹Send a message to me
         </h6>
-        <form className="p-8 flex flex-col space-y-2">
+        <form className="p-8 flex flex-col space-y-2" onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Your name"
-            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm placeholder:text-slate-400 text-slate-100 px-4 py-2"
+            placeholder="Name"
+            name="name"
+            onChange={handleChange}
           />
           <input
-            type="text"
-            placeholder="Your email"
-            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm placeholder:text-slate-400 text-slate-100 px-4 py-2"
+            type="email"
+            placeholder="Email"
+            name="email"
+            onChange={handleChange}
           />
           <input
             type="text"
             placeholder="Subject"
-            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm placeholder:text-slate-400 text-slate-100 px-4 py-2"
+            name="subject"
+            onChange={handleChange}
           />
           <textarea
             type="text"
             placeholder="Message"
             rows={6}
-            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm placeholder:text-slate-400 text-slate-100 px-4 py-2 resize-none"
+            className="resize-none"
+            name="message"
+            onChange={handleChange}
           />
-          <button className="px-6 py-2 rounded-sm font-medium bg-yellow-300 text-gray-800  border border-yellow-300 hover:bg-transparent hover:text-yellow-300">
-            Send
-          </button>
+          <button className="btn-fill">Send</button>
         </form>
       </section>
     </div>

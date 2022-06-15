@@ -46,12 +46,12 @@ const Bottombar = () => {
     <footer className="bg-gray-900 flex items-center justify-between">
       <section className="flex items-center">
         {leftItems.map((item) => (
-          <Layout item={item} />
+          <Layout item={item} key={item.label} />
         ))}
       </section>
       <section className="flex items-center">
         {rightItems.map((item) => (
-          <Layout item={item} />
+          <Layout item={item} key={item.label} />
         ))}
       </section>
     </footer>
