@@ -59,14 +59,14 @@ const Contact = () => {
           🤙🏻Connect with me via
         </h6>
         <div className="p-8">
-          <p className="text-slate-400 font-mono text-xl leading-relaxed">
-            <span className="text-yellow-300">.socials</span> &#123;
+          <p className="text-slate-400 font-mono text-xl leading-relaxed  before:content-[counter(line)]">
+            <span className="text-yellow-300">&nbsp;.socials</span> &#123;
           </p>
-          {contactItems.slice(0, 8).map((item, index) => (
+          {contactItems.map((item, index) => (
             <p
-              className="text-slate-400 font-mono text-xl leading-relaxed"
+              className="text-slate-400 font-mono text-xl leading-relaxed  before:content-[counter(line)]"
               key={index}>
-              &nbsp;&nbsp;{item.social}:{" "}
+              &nbsp;&nbsp;&nbsp;&nbsp;{item.social}:&nbsp;
               <a
                 href={item.href}
                 target="_blank"
@@ -77,23 +77,8 @@ const Contact = () => {
               ;
             </p>
           ))}
-          {contactItems.slice(8, contactItems.length).map((item, index) => (
-            <p
-              className="text-slate-400 font-mono text-xl leading-relaxed"
-              key={index}>
-              &nbsp;&nbsp;{item.social}:{" "}
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="text-yellow-300">
-                {item.link}
-              </a>
-              ;
-            </p>
-          ))}
-          <p className="text-slate-400 font-mono text-xl leading-relaxed">
-            &#125;
+          <p className="text-slate-400 font-mono text-xl leading-relaxed  before:content-[counter(line)]">
+            &nbsp;&#125;
           </p>
         </div>
       </section>
@@ -105,25 +90,25 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Your name"
-            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm text-slate-400 px-4 py-2"
+            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm placeholder:text-slate-400 text-slate-100 px-4 py-2"
           />
           <input
             type="text"
             placeholder="Your email"
-            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm text-slate-400 px-4 py-2"
+            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm placeholder:text-slate-400 text-slate-100 px-4 py-2"
           />
           <input
             type="text"
             placeholder="Subject"
-            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm text-slate-400 px-4 py-2"
+            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm placeholder:text-slate-400 text-slate-100 px-4 py-2"
           />
           <textarea
             type="text"
             placeholder="Message"
             rows={6}
-            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm text-slate-400 px-4 py-2 resize-none"
+            className="bg-transparent outline-none border border-slate-600 focus:border-slate-100 rounded-sm placeholder:text-slate-400 text-slate-100 px-4 py-2 resize-none"
           />
-          <button className="px-6 py-2 rounded-sm font-medium bg-yellow-300 text-gray-800">
+          <button className="px-6 py-2 rounded-sm font-medium bg-yellow-300 text-gray-800  border border-yellow-300 hover:bg-transparent hover:text-yellow-300">
             Send
           </button>
         </form>

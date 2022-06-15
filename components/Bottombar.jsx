@@ -26,39 +26,32 @@ const rightItems = [
   },
 ];
 
+const Layout = ({ item }) => (
+  <div
+    className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 p-2"
+    key={item.label}>
+    <Image
+      src={item.icon}
+      alt="bell icon"
+      height={16}
+      width={16}
+      className="invert"
+    />
+    <p className="text-xs text-slate-400">{item.label}</p>
+  </div>
+);
+
 const Bottombar = () => {
   return (
     <footer className="bg-gray-900 flex items-center justify-between">
       <section className="flex items-center">
-        {leftItems.map(({ label, icon }) => (
-          <div
-            className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 px-2 py-1"
-            key={label}>
-            <Image
-              src={icon}
-              alt="bell icon"
-              height={16}
-              width={16}
-              className="invert"
-            />
-            <p className="text-sm text-slate-400">{label}</p>
-          </div>
+        {leftItems.map((item) => (
+          <Layout item={item} />
         ))}
       </section>
       <section className="flex items-center">
-        {rightItems.map(({ label, icon }) => (
-          <div
-            className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 px-2 py-1"
-            key={label}>
-            <Image
-              src={icon}
-              alt="bell icon"
-              height={16}
-              width={16}
-              className="invert"
-            />
-            <p className="text-sm text-slate-400">{label}</p>
-          </div>
+        {rightItems.map((item) => (
+          <Layout item={item} />
         ))}
       </section>
     </footer>

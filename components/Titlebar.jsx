@@ -2,6 +2,8 @@ import Image from "next/image";
 
 const items = ["File", "Edit", "View", "Go", "Run", "Terminal", "Help"];
 
+
+
 const Titlebar = () => {
   return (
     <section className="bg-gray-900 px-2 flex items-center justify-between">
@@ -16,13 +18,13 @@ const Titlebar = () => {
           {items.map((item) => (
             <p
               key={item}
-              className="text-sm text-slate-400 hover:bg-gray-800 p-2 cursor-pointer">
+              className="text-xs text-slate-400 hover:bg-gray-800 p-2 cursor-pointer">
               {item}
             </p>
           ))}
         </div>
       </div>
-      <p className="flex-1 text-center text-sm text-slate-400">
+      <p className="flex-1 text-center text-xs text-slate-400">
         Manikangkan Das - Visual Studio Code
       </p>
       <div className="space-x-2 flex-1 flex items-center justify-end">
