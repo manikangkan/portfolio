@@ -33,6 +33,11 @@ export const items = [
     path: "/github",
     icon: "/markdown_icon.svg",
   },
+  {
+    name: "settings.md",
+    path: "/settings",
+    icon: "/markdown_icon.svg",
+  },
 ];
 
 const Explorer = () => {
@@ -49,7 +54,7 @@ const Explorer = () => {
             alt="arrow"
             className="invert"
           />
-          <p className="text-slate-100 font-medium">Explorer</p>
+          <h2 className="text-slate-100 font-medium">Explorer</h2>
         </div>
         <div className="icon-btn">
           <Image
