@@ -44,7 +44,7 @@ const Explorer = () => {
   const router = useRouter();
 
   return (
-    <nav className="bg-gray-900 w-1/6">
+    <nav className="hidden xl:block bg-gray-900 w-1/6">
       <div className="p-4 flex items-center justify-between">
         <div className="space-x-2 flex items-center">
           <Image

@@ -7,26 +7,26 @@ const CreateUpdate = ({ date }) => (
     <Image
       src="/icons/clock.svg"
       alt="clock icon"
-      height={20}
-      width={20}
+      height={16}
+      width={16}
       className="invert"
     />
-    <p className="text-slate-100 text-sm">{format(date)}</p>
+    <p className="text-slate-100 text-xs">{format(date)}</p>
   </div>
 );
 
 const Projects = ({ repos }) => {
   return (
     <div className="p-4">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between">
         <h6 className="text-slate-400 font-mono text-2xl">
           😃Projects I've build so far
         </h6>
-        <form className="w-1/2 flex items-center space-x-2">
+        <form className="w-full lg:w-1/2 flex items-center space-x-2">
           <input
             type="text"
             placeholder="Search for a project ..."
-            className="w-full"
+            className="flex-1"
           />
           <div className="bg-yellow-300 rounded-sm pt-3 pb-1 px-3 cursor-pointer">
             <Image
@@ -39,7 +39,7 @@ const Projects = ({ repos }) => {
           </div>
         </form>
       </div>
-      <section className="masonry-3-col py-4">
+      <section className="md:masonry-2-col lg:masonry-3-col py-4">
         {repos?.map((repo) => (
           <a href={repo.html_url} key={repo.id}>
             <div className="break-inside mb-4 bg-gray-900 rounded-md px-6 py-4 space-y-4 border border-transparent hover:border-yellow-300 cursor-pointer">
@@ -56,28 +56,24 @@ const Projects = ({ repos }) => {
                 {repo.visibility}
               </span> */}
               </div>
-              {repo.description ? (
+              {repo.description && (
                 <p className="text-slate-400 text-sm leading-relaxed">
                   {repo.description}
-                </p>
-              ) : (
-                <p className="text-slate-400 text-sm">
-                  Description unavailable
                 </p>
               )}
               <div className="flex items-center space-x-4">
                 <CreateUpdate date={repo.created_at} />
-                <CreateUpdate date={repo.update_at} />
+                <CreateUpdate date={repo.updated_at} />
               </div>
               {repo.language && (
                 <div className="flex items-center space-x-2">
                   <span
-                    className={`h-5 aspect-square inline-block rounded-full ${
+                    className={`h-4 aspect-square inline-block rounded-full ${
                       repo.language === "JavaScript"
                         ? "bg-yellow-300"
                         : "bg-red-500"
                     }`}></span>
-                  <p className="text-slate-100 text-sm">{repo.language}</p>
+                  <p className="text-slate-100 text-xs">{repo.language}</p>
                 </div>
               )}
             </div>

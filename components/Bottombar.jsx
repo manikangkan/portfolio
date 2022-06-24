@@ -54,7 +54,7 @@ const Layout = ({ item }) => (
 
 const Bottombar = () => {
   return (
-    <footer className="bg-gray-900 flex items-center justify-between">
+    <footer className="hidden bg-gray-900 sm:flex items-center justify-between">
       <section className="flex items-center">
         {leftItems.map((item) => (
           <Layout item={item} key={item.label} />

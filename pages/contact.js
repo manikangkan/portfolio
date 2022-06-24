@@ -61,7 +61,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="p-4 flex items-start">
+    <div className="p-4 flex flex-col lg:flex-row items-start">
       <section className="flex-1">
         <h6 className="text-slate-400 font-mono text-2xl">
           🤙🏻Connect with me via
@@ -90,7 +90,7 @@ const Contact = () => {
           </p>
         </div>
       </section>
-      <section className="flex-1">
+      <section className="flex-1 w-full">
         <h6 className="text-slate-400 font-mono text-2xl">
           🥹Send a message to me
         </h6>

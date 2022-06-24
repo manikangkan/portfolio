@@ -50,7 +50,7 @@ const Layout = ({ item }) => {
   return (
     <Link href={item.path} key={item.path}>
       <div
-        className={`px-4 pt-3 pb-2 cursor-pointer opacity-40 hover:opacity-100 border-l-2 border-transparent relative group flex items-center ${
+        className={`w-max px-4 pt-3 pb-2 cursor-pointer opacity-40 hover:opacity-100 border-l-2 border-transparent relative group flex items-center ${
           router.pathname === item.path && "border-l-slate-100 opacity-100"
         }`}>
         <Image
@@ -70,7 +70,6 @@ const Layout = ({ item }) => {
 
 const Sidebar = () => {
   const router = useRouter();
-  console.log(router.pathname);
   return (
     <aside className="bg-gray-800 flex flex-col justify-between">
       <section className="flex flex-col">

@@ -23,8 +23,8 @@ const rightItems = [
 
 const Tabsbar = () => {
   return (
-    <div className="bg-gray-900 flex items-center justify-between">
-      <div className="flex items-center">
+    <div className="hidden bg-gray-900 lg:flex items-center justify-between">
+      <div className="flex-1 flex items-center">
         {items.map((item) => (
           <Tab item={item} key={item.name} />
         ))}
@@ -32,7 +32,13 @@ const Tabsbar = () => {
       <div className="flex items-center space-x-2 mx-4">
         {rightItems.map((item) => (
           <div className="icon-btn" key={item.label}>
-            <Image src={item.icon} alt="bell icon" height={16} width={16} className="invert mt-1"/>
+            <Image
+              src={item.icon}
+              alt="bell icon"
+              height={16}
+              width={16}
+              className="invert mt-1"
+            />
           </div>
         ))}
       </div>

@@ -6,7 +6,7 @@ const CustomHead = ({ title }) => {
       <title>{title}</title>
       <meta
         name="description"
-        content="Manikangkan Das is an avid full stack web developer building websites and applications you'd love to use"
+        content="Manikangkan Das is a Full Stack Developer & UI/UX Designer from India"
       />
       <meta
         name="keywords"
@@ -15,13 +15,19 @@ const CustomHead = ({ title }) => {
       <meta property="og:title" content="Manikangkan Das's Portfolio" />
       <meta
         property="og:description"
-        content="A full-stack developer building websites that you'd like to use."
+        content="A full-stack developer & UI/UX designer building products that you'd like to use."
       />
-      <meta property="og:image" content="https://imgur.com/4zi5KkQ.png" />
+      <meta
+        property="og:image"
+        content="https://avatars.githubusercontent.com/u/75943412?v=4"
+      />
       <meta property="og:url" content="https://vscode-portfolio.vercel.app" />
       <meta name="twitter:card" content="summary_large_image" />
-      <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
-      <link href="http://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+      <link
+        href="http://fonts.cdnfonts.com/css/cascadia-code"
+        rel="stylesheet"
+      />
     </Head>
   );
 };

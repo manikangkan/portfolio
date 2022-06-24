@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="h-full grid place-content-center">
-      <div className="flex items-start space-x-8">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start space-x-8 text-center lg:text-start">
         <Image
           src="/profile.jpg"
           alt="vs code icon"
