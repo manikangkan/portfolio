@@ -67,7 +67,7 @@ const Contact = () => {
           🤙🏻Connect with me via
         </h6>
         <div className="p-8">
-          <p className="text-slate-400 font-mono text-xl leading-relaxed  before:content-[counter(line)]">
+          <p className="text-slate-400 font-mono text-xl leading-relaxed before:content-[counter(line)]">
             <span className="text-yellow-300">&nbsp;.socials</span> &#123;
           </p>
           {items.map((item, index) => (
@@ -85,7 +85,7 @@ const Contact = () => {
               ;
             </p>
           ))}
-          <p className="text-slate-400 font-mono text-xl leading-relaxed  before:content-[counter(line)]">
+          <p className="text-slate-400 font-mono text-xl leading-relaxed before:content-[counter(line)]">
             &nbsp;&#125;
           </p>
         </div>

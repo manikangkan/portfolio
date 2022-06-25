@@ -13,12 +13,13 @@ export default function Home() {
           className="rounded-full"
         />
         <section className="space-y-8">
-          <div className="space-y-2">
+          <div className="space-y-4">
             <h1 className="text-slate-100 font-mono text-4xl">
               Manikangkan Das
             </h1>
             <h6 className="text-slate-400 font-mono text-2xl">
-              Full Stack Web Developer & UI/UX Designer
+              A computer engineering student from India who
+              loves to create for the web 😃
             </h6>
           </div>
           <div className="space-x-4">
