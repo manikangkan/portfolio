@@ -91,7 +91,7 @@ const Settings = () => {
       </div>
       <section className="md:masonry-2-col lg:masonry-3-col py-4">
         {updatedItems.map((updatedItem) => (
-          <ThemeInfoCard updatedItem={updatedItem} />
+          <ThemeInfoCard updatedItem={updatedItem} key={updatedItem.name}/>
         ))}
       </section>
     </div>
